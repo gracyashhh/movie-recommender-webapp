@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Dela+Gothic+One&family=Kaushan+Script&family=Parisienne&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(bgt.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color:#fff;
+    
+}
+
+h1 {
+  /* font-family: 'templates/Flaemische Kanzleischrift.ttf','Dela Gothic One','Chango', cursive; */
+  font-family: 'Kaushan Script', cursive;
+
+
+  color:#f50612;
+  font-size:28px;
+
+} 
+
+.container{
+    padding:50px;
+    padding-top: 20px;
+    margin-top:10%;
+}
+
+form{
+    background-color: rgb(0,0,0,.75);
+    font-size:35px;
+    padding:25px;
+    padding-top:45px;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 25px;
+    width: 50%;
+    translateY:-65px;
+}
+span{
+    font-family: 'Kaushan Script', cursive;
+    color:#fff;
+    font-size:24px;
+}
+@import url('https://fonts.googleapis.com/css?family=Fascinate+Inline&display=swap');
+button{
+    margin:30px;
+    padding:10px 20px;
+    background-color: #5f27cd;
+    color:#fff;
+    border-radius: 30px;
+    transition:background 2s;
+    font-family: 'Fascinate Inline', cursive;
+
+
+}
+.card{
+    width:200px;
+    background-color: rgba(0,0,0,0.75);
+    margin:30px;
+    margin-top:0;
+    padding:35px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    display:inline-block;
+}
+
+
+.choices{
+    margin: 0 7%;
+}
+
+
+  
+
+.heading{
+    font-weight: bold;
+    font-size: 50px;
+    padding:20px;
+    padding-top:0;
+    font-family: 'Parisienne', cursive;
+}
+input{
+    width:150px;
+    height:30px;
+    border-radius: 5px;
+    border-style: none;
+    outline: none;
+    position:relative;
+    top:45px;
+}
+
+
+
+/* LOAD EFFECTS */
+.loader-wrapper{
+    background: #111f4d;
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.loader {
+  overflow: hidden;
+  font-size: 10px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: #FFF;
+  background: linear-gradient(to right, #FFF 10%, rgba(255, 255, 255, 0) 42%);
+  position: relative;
+  animation: load3 1.4s infinite linear;
+  transform: translateZ(0);
+}
+
+.loader:after {
+    background: #111f4d;
+    
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.5;
+  }
+
+
+@-webkit-keyframes load3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* NEON EFFECT */
+
+
+.glow {
+    font-size: 70px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f50612, 0 0 40px #f50612, 0 0 50px #f50612, 0 0 60px #f50612, 0 0 70px #f50612;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px crimson, 0 0 40px crimson, 0 0 50px crimson, 0 0 60px crimson, 0 0 70px crimson, 0 0 80px crimson;
+    }
+  }
+
+
+  /* BUTTON DESIGN */
+
+
+.treat-button {
+  font-size: 4vmin;
+  appearance: none;
+  background: linear-gradient(to bottom, #fe8c00 , #f83600);
+  border: none;
+  color: #FFF;
+  outline: none;
+
+  border-radius: 2em;
+  padding: .6em 1.5em;
+  overflow: hidden;
+  user-select: none;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 0 0 1em rgba(white, .2);
+  transition: transform .1s cubic-bezier(.5, 0, .5, 1),
+    box-shadow .2s;
+}
+button:hover {
+  box-shadow: 0 0 4em rgba(#5f27cd, .7);
+  background: linear-gradient(to bottom,#f83600,  #fe8c00);
+
+
+  }
+
+
+button:active {
+    transform: scale(0.8) translateY(10%);
+    transition-timing-function: cubic-bezier(.5, 0, .5, 1);
+}
+
+
+.treat {
+  --scale-x: 0;
+  --scale-y: 0;
+  pointer-events: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: calc(50% - .5rem);
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vmin;
+  transform: 
+    translate(
+      calc( var(--x) * 1px ), 
+      calc( var(--y) * 1px )
+    ) 
+    translate(-50%, -50%);
+  pointer-events: none;
+  animation: 
+    treat-enter .1s ease-in backwards, 
+    treat-exit 300ms linear 
+    calc( (var(--lifetime, 3000) * 1ms) - 300ms) 
+    forwards;
+
+  @keyframes treat-enter {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes treat-exit {
+    to {
+      opacity: 0;
+    }
+  }
+}
+  .inner {
+    animation: inner-rotate .6s linear infinite;
+    transform: rotate( 
+      calc(-1turn * var(--direction) )
+    ); 
+    @keyframes inner-rotate {
+      to { 
+        transform: none;
+      } 
+    }
+  }
+
+/* SEARCH BAR DESIGN */
+
+.search {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  background: crimson;
+  border-radius: 50%;
+  transition: all 1s;
+  z-index: 4;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+}
+.search:hover {
+    cursor: pointer;
+  }
+.search::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 22px;
+    right: 0;
+    bottom: 0;
+    left: 22px;
+    width: 12px;
+    height: 2px;
+    background: white;
+    transform: rotate(45deg);
+    transition: all .5s;
+  }
+  .search::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -5px;
+    right: 0;
+    bottom: 0;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all .5s;
+  }
+
+input {
+  font-family: 'Inconsolata', monospace;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background: crimson;
+  color: white;
+  text-shadow: 0 0 10px crimson;
+  padding: 0 80px 0 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 25px 0 crimson,
+              0 20px 25px 0 rgba(0, 0, 0, 0.2);
+  transition: all 1s;
+  opacity: 0;
+  z-index: 5;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+}
+input:hover {
+    cursor: pointer;
+  }
+  input:focus {
+    width: 300px;
+    opacity: 1;
+    cursor: text;
+  }
+  input:focus ~ .search {
+    right: -250px;
+    background: #151515;
+    z-index: 6;
+  }
+  input:focus ~ .search::before {
+      top: 0;
+      left: 0;
+      width: 25px;
+    }
+    input:focus ~ .search::after {
+      top: 0;
+      left: 0;
+      width: 25px;
+      height: 2px;
+      border: none;
+      background: white;
+      border-radius: 0%;
+      transform: rotate(-45deg);
+    }
+  
+  input::placeholder {
+    color: white;
+    opacity: 0.5;
+    font-weight: bolder;
+  }
+
+.sug{
+  text-decoration: underline;
+  padding:20px;
+}
+.suggestions{
+  margin: 0 4%;
+  font-family: 'Fascinate Inline', cursive;
+  font-size: 28px;
+
+
+}
+
+.suggestions .card{
+  width:87%;
+
+}
+.choices .card{
+  transition-timing-function: ease;
+}
+.choices .card:hover{
+  background-color: #000;
+  box-shadow: 0 8px 6px -6px crimson;
+}

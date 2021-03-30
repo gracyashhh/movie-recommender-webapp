@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Movie-Recommendation-System</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='style.css') }}"
+    />
+    <link
+    rel="icon"
+    href="../static/movie.jpg"
+    sizes="16x16"
+    type="image/png"
+  />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <center>
+      <div class="text-effect">
+        <!-- Select the text in the preview and type in your own -->
+        <h1 class="glow">MOVIE Buff</h1>
+        <div class="gradient"></div>
+        <div class="spotlight"></div>
+      </div>
+    </center>
+    <div class="container">
+      <form action="/predict" method="post" class="form">
+        <label for="first_name" class="heading"
+          ><b>&nbsp;&nbsp; Favourite movie Please
+            <img src="https://img.icons8.com/emoji/48/000000/popcorn-emoji.png"/>
+          </b></label
+        >
+
+        <input
+          placeholder="Search movies here.."
+          name="Temperature"
+          id="first_name"
+          type="text"
+          class="validate"
+        />
+        <div class="search"></div>
+
+        <br />
+
+        <center>
+          <button class="treat-button" type="submit">Suggest me</button>
+        </center>
+      </form>
+      <br />
+      <div class="choices">
+        <div class="card">
+          <img src="{{poster1}}" alt="" />
+          <span>{{pred1}}</span>
+        </div>
+        <div class="card">
+          <img src="{{poster2}}" alt="" />
+          <span>{{pred2}}</span>
+        </div>
+        <div class="card">
+          <img src="{{poster3}}" alt="" />
+          <span>{{pred3}}</span>
+        </div>
+        <br />
+      </div>
+      <div class="suggestions">
+        <div class="card">
+              Few other suggestions would be:
+              <span class="sug">{{suggestion1}}</span>
+              <span class="sug">{{suggestion2}}</span>
+              <span class="sug">{{suggestion3}}</span>
+              <span class="sug">{{suggestion4}}</span>
+              <span class="sug">{{suggestion5}}</span>
+              <span class="sug">{{suggestion6}}</span>
+              <span class="sug">{{suggestion7}}</span>
+
+        </div>
+      </div>
+    </div>
+    <div class="loader-wrapper">
+      <div class="loader">Loading...</div>
+    </div>
+    <script>
+      $(window).on("load", function () {
+        $(".loader-wrapper").fadeOut("slow");
+      });
+    </script>
+    
+  </body>
+  <a href="https://icons8.com/icon/4AB7j_XjvHPH/popcorn"></a>
+</html>
