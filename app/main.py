@@ -3,7 +3,6 @@ import pickle
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-from pprint import pprint
 
 app = app = Flask(__name__, template_folder='templates', static_folder='static')
 model = pickle.load(open('model.pkl', 'rb'))
