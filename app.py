@@ -96,4 +96,8 @@ def predict():
         reply3="Hope you Enjoy using our site :)"
         output=['Avatar','Minions','Iron Man','The Guilt Trip','Home Alone','Darling','The Godfather']
         return render_template('recommendation.html', pred1=reply,pred2=reply2,pred3=reply3,suggestion1=output[0],suggestion2=output[1],suggestion3=output[2],suggestion4=output[3],suggestion5=output[4],suggestion6=output[5],suggestion7=output[6], end='\n')
+    
+     
+if __name__ == "__main__":
+        app.run()
         
