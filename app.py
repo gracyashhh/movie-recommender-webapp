@@ -41,8 +41,10 @@ def predict():
         
         sim_scores = list(enumerate(cosine_sim[idx]))
 
-        sim_scores = sorted(sim_scores, key=lambda x: x[0], reverse=True)
-
+        try:
+            sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
+        except ValueError:
+            sim_scores = sorted(sim_scores, key=lambda x: x[0], reverse=True)
         sim_scores = sim_scores[1:11]
 
         movie_indices = [i[0] for i in sim_scores]
