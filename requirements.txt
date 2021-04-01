@@ -2,7 +2,7 @@ Flask==1.1.2
 numpy==1.18.5
 matplotlib==3.3.2
 requests==2.24.0
-pandas==1.1.4
+pandas>=0.19
 beautifulsoup4==4.9.3
 scikit_learn==0.24.1
 gunicorn==20.0.4
