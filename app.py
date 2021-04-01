@@ -41,7 +41,7 @@ def predict():
         
         sim_scores = list(enumerate(cosine_sim[idx]))
 
-        sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
+        sim_scores = sorted(sim_scores, key=lambda x: x[0], reverse=True)
 
         sim_scores = sim_scores[1:11]
 
@@ -94,7 +94,7 @@ def predict():
         reply="Sorry, Currently we don't have this movie our database :("
         reply2="You could instead try entering the following below!"
         reply3="Hope you Enjoy using our site :)"
-        output=['Avatar','Minions','Iron Man','The Guilt Trip','Home Alone','Darling','The Godfather']
+        output=['Avatar','Minions','Iron Man','The Guilt Trip','Home Alone','Niagara','The Godfather']
         return render_template('recommendation.html', pred1=reply,pred2=reply2,pred3=reply3,suggestion1=output[0],suggestion2=output[1],suggestion3=output[2],suggestion4=output[3],suggestion5=output[4],suggestion6=output[5],suggestion7=output[6], end='\n')
     
      
